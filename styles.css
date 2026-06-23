@@ -321,11 +321,12 @@ body.locked .page { display: none; }
 
 .riddle {
   font-family: "MedievalSharp", serif;
-  font-size: 1.25rem;
+  font-size: clamp(0.85rem, 4vw, 1.2rem);
   line-height: 1.5;
   color: var(--ink);
   margin: 0 0 22px;
   padding: 0;
+  white-space: nowrap;
 }
 
 .gate-input {
