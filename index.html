@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Hobbit — An Audiobook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=MedievalSharp&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="locked">
+  <!-- Riddle gate -->
+  <div id="gate" class="gate">
+    <div class="gate-card">
+      <h1 class="gate-title">A riddle</h1>
+      <p class="gate-lead">No traveller may pass into these chapters unless they
+        answer the riddle:</p>
+      <blockquote class="riddle">
+        <!-- TODO: write your riddle here. The answer is "emeline". -->
+        Your riddle goes here&hellip;
+      </blockquote>
+      <form id="gate-form" autocomplete="off">
+        <input id="gate-input" class="gate-input" type="text"
+               placeholder="Speak your answer&hellip;" aria-label="Riddle answer" />
+        <button class="gate-btn" type="submit">Enter</button>
+      </form>
+      <p id="gate-msg" class="gate-msg" role="status"></p>
+    </div>
+  </div>
+
+  <div class="page">
+    <header class="hero">
+      <h1 class="title">The Hobbit</h1>
+      <p class="subtitle">or<br />There and Back Again</p>
+      <p class="author">by J.R.R. Tolkien</p>
+      <p class="byline">your personal (not entirely legal) audiobook</p>
+    </header>
+
+    <section class="intro">
+      <p>Welcome, Emeline, and happy birthday! 
+
+        The road goes ever on and on and I can't wait to read the rest with you :). I hope
+        that you have a fantastic day. 
+        
+        , and rest your feet a while. Gathered here are
+      the chapters of Mr. Bilbo Baggins' most unexpected journey &mdash; read
+      aloud for your listening, from the quiet comfort of Bag-End to the lonely
+      shadow of the Mountain.</p>
+
+      <p>Each chapter below may be played where you sit, or carried off to your
+      own device for the road ahead. Some chapters bear an illustration drawn
+      from the book itself; press the button to glimpse them.</p>
+
+      <p>New chapters are added as the reading goes on, so do check back. Mind
+      the trolls, keep to the path, and whatever you do &mdash; do not stray
+      from the road.</p>
+    </section>
+
+    <main>
+      <!-- Chapters are rendered by script.js -->
+      <ul id="chapter-list" class="chapter-list" aria-label="Chapters"></ul>
+
+      <p id="reading-note" class="reading-note">And I can't wait to read the rest with you!</p>
+    </main>
+
+  </div>
+
+  <!-- Lightbox for in-book illustrations -->
+  <div id="lightbox" class="lightbox" hidden>
+    <button class="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-nav lb-prev" aria-label="Previous">&#8249;</button>
+    <figure class="lb-figure">
+      <img id="lb-img" class="lb-img" alt="" />
+      <figcaption id="lb-caption" class="lb-caption"></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" aria-label="Next">&#8250;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

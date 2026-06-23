@@ -1,0 +1,5 @@
+# Source audio — large, not committed (MP3s are generated from these)
+*.wav
+
+# macOS cruft
+.DS_Store
